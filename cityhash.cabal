@@ -35,3 +35,19 @@ library
 
   ghc-options:      -Wall -O2 -fwarn-tabs
   default-language: Haskell98
+
+test-suite properties
+  hs-source-dirs: tests
+  main-is:        Properties.hs
+  type:           exitcode-stdio-1.0
+
+  build-depends:
+    base    >= 3 && < 5,
+    bytestring     == 0.9.*,
+    QuickCheck     == 2.4.*,
+    test-framework == 0.3.*,
+    test-framework-quickcheck2 == 0.2.*,
+    cityhash
+
+  ghc-options:      -fno-cse
+  default-language: Haskell98
