@@ -14,9 +14,9 @@
 -- and 128-bit interfaces.
 -- 
 -- Note that CityHash is designed to work on architectures where
--- unaligned reads have a small penalty. In practice it is only used
--- at Google on little-endian Intel/AMD CPUs it seems, and has not
--- been tested on big-endian architectures.
+-- unaligned reads do not have a large penalty. In practice it is only
+-- used at Google on little-endian Intel/AMD CPUs it seems, and has
+-- not been tested on big-endian architectures.
 -- 
 module Data.Digest.CityHash
 ( -- * Hashing values 
