@@ -1,5 +1,5 @@
 name:                cityhash
-version:             0.0.1
+version:             0.0.2
 synopsis:            bindings to Google CityHash
 description:
   This package implements a binding to the google CityHash family of hashing functions.
