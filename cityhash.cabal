@@ -1,8 +1,9 @@
 name:                cityhash
 version:             0.0.2
-synopsis:            bindings to Google CityHash
+synopsis:            Bindings to CityHash
 description:
-  This package implements a binding to the google CityHash family of hashing functions.
+  This package implements a binding to the CityHash family of hashing functions (implemented in C++.)
+  .
   See <http://code.google.com/p/cityhash/> for more information.
 homepage:            http://github.com/thoughtpolice/hs-cityhash
 bug-reports:         https://github.com/thoughtpolice/hs-cityhash/issues
@@ -45,7 +46,7 @@ test-suite properties
     base    >= 3 && < 5,
     bytestring     == 0.9.*,
     QuickCheck     == 2.4.*,
-    test-framework == 0.3.*,
+    test-framework == 0.4.*,
     test-framework-quickcheck2 == 0.2.*,
     cityhash
 

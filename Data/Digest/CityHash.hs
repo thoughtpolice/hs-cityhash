@@ -8,15 +8,15 @@
 -- Stability   : experimental
 -- Portability : portable (FFI)
 -- 
--- This module implements a binding to Google's CityHash family of
--- hashing functions. You can find more information here:
+-- This module implements a binding to the CityHash family of hashing
+-- functions. You can find more information here:
 -- <http://code.google.com/p/cityhash/>. It implements both the 64-bit
 -- and 128-bit interfaces.
 -- 
--- Note that CityHash is designed to work on architectures where
--- unaligned reads do not have a large penalty. In practice it is only
--- used at Google on little-endian Intel/AMD CPUs it seems, and has
--- not been tested on big-endian architectures.
+-- Note that CityHash was designed to work on architectures where
+-- unaligned reads do not have a large penalty. In practice, it is
+-- only used at Google on little-endian Intel/AMD CPUs, and has not
+-- been tested on big-endian architectures.
 -- 
 module Data.Digest.CityHash
 ( -- * Hashing values 
@@ -39,10 +39,10 @@ cityHash64 bs
       return $ c_CityHash64 cstr clen
 {-# INLINEABLE cityHash64 #-}
 
--- | Hash a value into a 128bit result. Per the google documentation,
--- this is probably faster for inputs which the length is greater than,
--- say, 200 bytes. It's also used inside google for code that wants to
--- have minimal collisions.
+-- | Hash a value into a 128bit result. Per the documentation, this is
+-- probably only faster for inputs with a length greater than
+-- approximately 200 bytes. Alternatively, use this when you wish
+-- to have minimal collisions.
 cityHash128 :: S.ByteString -> Word128
 cityHash128 bs
   = unsafePerformIO . U.unsafeUseAsCStringLen bs $ \(cstr,clen) ->
@@ -58,6 +58,7 @@ cityHash128 bs
 --
 -- FFI bindings
 -- 
+
 foreign import ccall unsafe "hs_city.h hs_CityHash64"
   c_CityHash64 :: CString -> Int -> Word64
 
