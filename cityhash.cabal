@@ -17,7 +17,7 @@ cabal-version:       >=1.10
 tested-with:         GHC==7.0.4, GHC==7.2.1
 
 extra-source-files:
-  cbits/city.cc, cbits/city.h,
+  cbits/city.cc, cbits/city.h, cbits/config.h
   cbits/hs_city.cc, cbits/hs_city.h,
   README.md, tests/Properties.hs
 
