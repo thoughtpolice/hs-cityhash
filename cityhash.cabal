@@ -9,11 +9,12 @@ homepage:            http://github.com/thoughtpolice/hs-cityhash
 bug-reports:         https://github.com/thoughtpolice/hs-cityhash/issues
 license:             BSD3
 license-file:        LICENSE
-author:              Austin Seipp
-maintainer:          as@hacks.yi.org
+author:              Austin Seipp <mad.one@gmail.com>
+maintainer:          Austin Seipp <mad.one@gmail.com>
 category:            Codec
 build-type:          Simple
 cabal-version:       >=1.10
+tested-with:         GHC==7.0.4, GHC==7.2.1
 
 extra-source-files:
   cbits/city.cc, cbits/city.h,
