@@ -29,8 +29,8 @@ library
   exposed-modules: Data.Digest.CityHash
   build-depends:
     base       >= 3 && < 5,
-    bytestring == 0.9.*,
-    largeword  >= 1.0.0
+    bytestring >= 0.9,
+    largeword  >= 1.0
   c-sources:       cbits/city.cc, cbits/hs_city.cc
   include-dirs:    cbits
   extra-libraries: stdc++
@@ -46,11 +46,12 @@ test-suite properties
 
   build-depends:
     base           >= 3 && < 5,
-    bytestring     == 0.9.*,
-    QuickCheck     == 2.4.*,
-    test-framework == 0.4.*,
-    test-framework-quickcheck2 == 0.2.*,
+    bytestring     >= 0.9,
+    largeword      >= 1.0,
+    QuickCheck     >= 2.4,
+    test-framework >= 0.5,
+    test-framework-quickcheck2 >= 0.2,
     cityhash
 
-  ghc-options:      -fno-cse
+  ghc-options:      -fno-cse -fno-warn-orphans
   default-language: Haskell98
