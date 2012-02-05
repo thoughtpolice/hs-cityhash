@@ -1,7 +1,7 @@
 {-# LANGUAGE ForeignFunctionInterface #-}
 -- |
 -- Module      : Data.Digest.CityHash
--- Copyright   : (c) Austin Seipp 2011
+-- Copyright   : (c) Austin Seipp 2011-2012
 -- License     : BSD3
 -- 
 -- Maintainer  : mad.one@gmail.com
