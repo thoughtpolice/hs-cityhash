@@ -7,8 +7,8 @@ description:
   See <http://code.google.com/p/cityhash/> for more information.
 homepage:            http://github.com/thoughtpolice/hs-cityhash
 bug-reports:         https://github.com/thoughtpolice/hs-cityhash/issues
-license:             BSD3
-license-file:        LICENSE
+license:             MIT
+license-file:        LICENSE.txt
 author:              Austin Seipp <mad.one@gmail.com>
 maintainer:          Austin Seipp <mad.one@gmail.com>
 category:            Codec
