@@ -25,16 +25,21 @@ source-repository head
   type: git
   location: https://github.com/thoughtpolice/hs-cityhash.git
 
+flag sse42
+  default: False
+
 library
   exposed-modules: Data.Digest.CityHash
   build-depends:
-    base       >= 3 && < 5,
-    bytestring >= 0.9,
-    largeword  >= 1.0
+    base         >= 3 && < 5,
+    bytestring   >= 0.9,
+    largeword    >= 1.0
   c-sources:       cbits/city.cc, cbits/hs_city.cc
   include-dirs:    cbits
   extra-libraries: stdc++
 
+  if flag(sse42)
+    cc-options:     -D__SSE4_2__ -msse4.2
   cc-options:       -O3
   ghc-options:      -Wall -O2 -fwarn-tabs
   default-language: Haskell98
