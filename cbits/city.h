@@ -74,11 +74,6 @@ uint128 CityHash128(const char *s, size_t len);
 // hashed into the result.
 uint128 CityHash128WithSeed(const char *s, size_t len, uint128 seed);
 
-uint128 CityHashCrc128(const char *s, size_t len);
-
-uint128 CityHashCrc128WithSeed(const char *s, size_t len, uint128 seed);
-
-
 // Hash 128 input bits down to 64 bits of output.
 // This is intended to be a reasonably good hash function.
 inline uint64 Hash128to64(const uint128& x) {

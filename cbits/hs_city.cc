@@ -1,4 +1,5 @@
 #include "city.h"
+#include "citycrc.h"
 #include "hs_city.h"
 
 uint64_t hs_CityHash64(const char* buf, size_t len) {
