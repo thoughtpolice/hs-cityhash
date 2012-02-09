@@ -1,5 +1,5 @@
 name:                cityhash
-version:             0.3.0.0
+version:             0.3.0.1
 synopsis:            Bindings to CityHash
 description:
   This package implements a binding to the CityHash family of hashing functions (implemented in C++.)
