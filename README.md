@@ -5,6 +5,8 @@ functions, written by Google.
 
 These are the awesome Haskell bindings.
 
+[travis-ci.org](http://travis-ci.org) results: [![Build Status](https://secure.travis-ci.org/thoughtpolice/hs-cityhash.png?branch=master)](http://travis-ci.org/thoughtpolice/hs-cityhash)
+
 # Installation
 
 It's just a `cabal install` away:
